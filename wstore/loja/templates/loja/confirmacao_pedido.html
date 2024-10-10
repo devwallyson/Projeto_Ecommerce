@@ -1,0 +1,80 @@
+{% extends 'loja/base.html' %}
+
+{% block content %}
+<div class="container mt-5">
+    <h2 class="text-center mb-4">Informações de Pagamento</h2>
+
+    <form action="{% url 'processar_pagamento' %}" method="post">
+        {% csrf_token %}
+
+        <h4>Endereço de Entrega</h4>
+        <div class="mb-3">
+            <label for="cidade" class="form-label">Cidade</label>
+            <input type="text" class="form-control" id="cidade" name="cidade" required>
+        </div>
+        <div class="mb-3">
+            <label for="cep" class="form-label">CEP</label>
+            <input type="text" class="form-control" id="cep" name="cep" required>
+        </div>
+        <div class="mb-3">
+            <label for="complemento" class="form-label">Complemento</label>
+            <input type="text" class="form-control" id="complemento" name="complemento">
+        </div>
+        <div class="mb-3">
+            <label for="numero" class="form-label">Número</label>
+            <input type="text" class="form-control" id="numero" name="numero" required>
+        </div>
+
+        <h4>Forma de Pagamento</h4>
+        <div class="form-check mb-3">
+            <input class="form-check-input" type="radio" name="pagamento" id="cartao" value="cartao" checked>
+            <label class="form-check-label" for="cartao">
+                Cartão de Crédito
+            </label>
+        </div>
+        <div id="cartao_form">
+            <div class="mb-3">
+                <label for="numero_cartao" class="form-label">Número do Cartão</label>
+                <input type="text" class="form-control" id="numero_cartao" name="numero_cartao">
+            </div>
+            <div class="mb-3">
+                <label for="validade_cartao" class="form-label">Validade</label>
+                <input type="text" class="form-control" id="validade_cartao" name="validade_cartao">
+            </div>
+            <div class="mb-3">
+                <label for="cvv_cartao" class="form-label">CVV</label>
+                <input type="text" class="form-control" id="cvv_cartao" name="cvv_cartao">
+            </div>
+        </div>
+
+        <div class="form-check mb-3">
+            <input class="form-check-input" type="radio" name="pagamento" id="pix" value="pix">
+            <label class="form-check-label" for="pix">
+                PIX
+            </label>
+        </div>
+        <div id="pix_form" style="display:none;">
+            <div class="mb-3">
+                <label for="chave_pix" class="form-label">Chave PIX</label>
+                <input type="text" class="form-control" id="chave_pix" name="chave_pix">
+            </div>
+        </div>
+
+        <button type="submit" class="btn btn-success w-100 mt-4">Finalizar Pagamento</button>
+    </form>
+</div>
+
+<script>
+    document.querySelectorAll('input[name="pagamento"]').forEach((input) => {
+        input.addEventListener('change', function() {
+            if (this.value === 'cartao') {
+                document.getElementById('cartao_form').style.display = 'block';
+                document.getElementById('pix_form').style.display = 'none';
+            } else {
+                document.getElementById('cartao_form').style.display = 'none';
+                document.getElementById('pix_form').style.display = 'block';
+            }
+        });
+    });
+</script>
+{% endblock %}

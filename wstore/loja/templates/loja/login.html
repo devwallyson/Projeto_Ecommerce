@@ -1,0 +1,22 @@
+{% extends 'loja/base.html' %}
+
+{% block content %}
+<div class="container mt-5">
+    <div class="row justify-content-center">
+        <div class="col-md-4">
+            <div class="text-center">
+                <i class="bi bi-person-circle" style="font-size: 4rem; color: #0d437e;"></i>
+            </div>
+            <h2 class="text-center mb-4">Login</h2>
+            <form method="post" class="bg-light p-4 border rounded">
+                {% csrf_token %}
+                {{ form.as_p }}
+                <button type="submit" class="btn btn-primary w-100">Entrar</button>
+            </form>
+            <div class="text-center mt-3">
+                <p>Não tem uma conta? <a href="{% url 'registrar' %}">Registre-se</a></p>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}
