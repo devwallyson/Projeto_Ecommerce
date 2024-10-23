@@ -9,14 +9,11 @@ A **W Store** é uma loja virtual onde os usuários podem visualizar produtos, a
 
 ### Pilares da Orientação a Objetos Aplicados
 
-1. **Encapsulamento**: 
-   - A lógica de negócios foi encapsulada dentro de classes e métodos, protegendo os dados internos e expondo apenas o necessário para a interação externa. A manipulação direta de atributos foi evitada, utilizando métodos apropriados (getters e setters) para manter a integridade dos dados.
+1. **Encapsulamento**;
 
-2. **Herança**:
-   - Utilizei herança para compartilhar características comuns entre diferentes tipos de entidades. Por exemplo, a classe base `Usuario` foi herdada por `ClienteRegistrado`, permitindo o compartilhamento de funcionalidades enquanto especializava o comportamento de clientes com registros, como o gerenciamento de listas de desejos e histórico de compras.
-
-3. **Polimorfismo**: 
-   - O polimorfismo foi implementado em diferentes formas de pagamento, com uma classe base `Pagamento` que foi especializada em classes como `PagamentoCartao` e `PagamentoBoleto`. Isso permitiu que o código tratasse diferentes tipos de pagamento de maneira flexível e extensível.
+2. **Herança**;
+   
+3. **Polimorfismo**.
 
 ## Tecnologias Utilizadas
 
@@ -68,10 +65,4 @@ A **W Store** é uma loja virtual onde os usuários podem visualizar produtos, a
 
 7. Acesse o projeto no navegador através do endereço: `http://127.0.0.1:8000`
 
-## Capturas de Tela (opcional)
 
-Inclua aqui capturas de tela para mostrar o design da interface e o funcionamento das funcionalidades.
-
----
-
-Esse README fornece uma visão clara e profissional do seu projeto **W Store**, explicando o uso de orientação a objetos, tecnologias aplicadas, e instruções para a execução.
