@@ -1,8 +1,5 @@
-Aqui está um exemplo de como você pode estruturar o texto para o README do seu projeto no GitHub:
 
----
-
-# W Store - E-commerce
+# W Store  E-commerce
 
 **W Store** é um projeto de e-commerce desenvolvido durante a disciplina de Orientação a Objetos, utilizando os princípios fundamentais da orientação a objetos (Encapsulamento, Herança e Polimorfismo) com **Python** e **Django** como ferramentas de desenvolvimento. Além disso, o projeto faz uso de funcionalidades do **Bootstrap** para a criação de uma interface responsiva e amigável.
 
