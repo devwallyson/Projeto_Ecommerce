@@ -66,3 +66,5 @@ A **W Store** é uma loja virtual onde os usuários podem visualizar produtos, a
 7. Acesse o projeto no navegador através do endereço: `http://127.0.0.1:8000`
 
 
+
+
