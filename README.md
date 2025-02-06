@@ -48,22 +48,17 @@ A **W Store** é uma loja virtual onde os usuários podem visualizar produtos, a
    source venv/bin/activate  # No Windows: venv\Scripts\activate
    ```
 
-4. Instale as dependências:
-   ```bash
-   pip install -r requirements.txt
-   ```
-
-5. Execute as migrações:
+4. Execute as migrações:
    ```bash
    python manage.py migrate
    ```
 
-6. Inicie o servidor local:
+5. Inicie o servidor local:
    ```bash
    python manage.py runserver
    ```
 
-7. Acesse o projeto no navegador através do endereço: `http://127.0.0.1:8000`
+6. Acesse o projeto no navegador através do endereço: `http://127.0.0.1:8000`
 
 
 
