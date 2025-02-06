@@ -34,7 +34,7 @@ A **W Store** é uma loja virtual onde os usuários podem visualizar produtos, a
 
 1. Clone este repositório:
    ```bash
-   git clone https://github.com/seuusuario/wstore.git
+   git clone https://github.com/devwallyson/Projeto_Ecommerce.git
    ```
 
 2. Acesse o diretório do projeto:
